@@ -52,10 +52,53 @@
                 </h:form>
                 <h:form>
                     <!--form untuk menampilkan text uppercase-->
-
+                    <p:fieldset legend="Upper text"
+                                style="margin-bottom: 16px;">
+                    <h:panelGrid columns="2"
+                                 columnClasses="label smx, value"
+                                 styleClass="ui-fluid"
+                                 style="margin-bottom: 16px; width: 100%;">
+                        <p:outputLabel for="text1" value="Text bebas"/>
+                        <p:inputText id="text1" value="#{soal1Controller.text1}"/>
+                        
+                    </h:panelGrid>
+                    <p:outputPanel>
+                        <p:commandButton icon="fa fa-sticky-note"
+                                         value="Tampilkan Text"
+                                         actionListener="#{soal1Controller.tampilkanText()}"
+                                         update="@form"/>
+                    </p:outputPanel>
+                    <p:outputPanel id="resultPanel">
+                        <h:outputText value="#{soal1Controller.hasilText1}" 
+                                              style="display: block; padding: 8px; font-size: 24px; text-align: center;"
+                                              id="hasilText1"/>
+                    </p:outputPanel>    
+                    </p:fieldset>  
                 </h:form>
                 <h:form>
                     <!--form untuk menampilkan text lowercase-->
+                    <p:fieldset legend="Lower text2"
+                                style="margin-bottom: 16px;">
+                    <h:panelGrid columns="2"
+                                 columnClasses="label smx, value"
+                                 styleClass="ui-fluid"
+                                 style="margin-bottom: 16px; width: 100%;">
+                        <p:outputLabel for="text1" value="Text bebas"/>
+                        <p:inputText id="text1" value="#{soal1Controller.text1}"/>
+                        
+                    </h:panelGrid>
+                    <p:outputPanel>
+                        <p:commandButton icon="fa fa-sticky-note"
+                                         value="Tampilkan Text"
+                                         actionListener="#{soal1Controller.tampilkanText()}"
+                                         update="@form"/>
+                    </p:outputPanel>
+                    <p:outputPanel id="resultPanel">
+                        <h:outputText value="#{soal1Controller.hasilText1}" 
+                                              style="display: block; padding: 8px; font-size: 24px; text-align: center;"
+                                              id="hasilText1"/>
+                    </p:outputPanel>    
+                    </p:fieldset>  
                 </h:form>
             </p:layoutUnit>
         </p:layout>
